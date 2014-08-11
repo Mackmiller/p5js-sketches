@@ -38,7 +38,7 @@ function draw() {
 	y += dy * dt;
 	z += dz * dt;
 
-	stroke(0, 255, 0);
+	stroke(0, 255, 0, 100);
 	strokeWeight(2);
 	point(to_x(x), to_z(z));
 }
