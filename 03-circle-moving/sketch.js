@@ -1,10 +1,21 @@
-var x = 0
+var t = 0;
 
 function setup() {
-	createCanvas(640, 480)
+  createCanvas(windowWidth, windowHeight);
+  stroke(0, 255, 0);
+  strokeWeight(40);
 }
 
 function draw() {
-	ellipse(x, height / 2, 20, 20)
-	x = x + 1
+  clear();
+  background(0);
+
+  var theta = t * Math.PI / 200;
+  var x = Math.cos(theta);
+  var y = Math.sin(theta);
+
+  point((0.5 + 0.25 * x) * windowWidth,
+        (0.5 + 0.25 * y) * windowHeight);
+
+  t += 1;
 }
