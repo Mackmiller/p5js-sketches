@@ -13,8 +13,7 @@ var distancePerTick = 0.05;
 function draw() {
   background(0x16, 0x16, 0x1d); // eigengrau
 
-  var dist = Math.sqrt(Math.pow(mouseX - x, 2) + Math.pow(mouseY - y, 2));
-  if (dist >= 1) {
+  if (dist(x, y, mouseX, mouseY) >= 1) {
     x += distancePerTick * (mouseX - x);
     y += distancePerTick * (mouseY - y);
   }
