@@ -2,10 +2,10 @@ function preload() {
 }
 
 function setup() {
-	createCanvas(displayWidth, displayHeight);
-	stroke(255, 100);
-	background(0);
-	noFill();
+  createCanvas(windowWidth, windowHeight);
+  stroke(255, 100);
+  background(0);
+  noFill();
 }
 
 function draw() {
