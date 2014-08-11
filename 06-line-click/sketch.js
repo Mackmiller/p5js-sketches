@@ -1,8 +1,11 @@
-var first = true;
+var lineStarted = false;
 var x, y;
 
 function setup() {
 	createCanvas(displayWidth, displayHeight);
+	onmouseup = function() {
+		lineStarted = false;
+	};
 }
 
 function draw() {
@@ -11,7 +14,7 @@ function draw() {
 		strokeWeight(3);
 		point(mouseX, mouseY);
 
-		if (!first) {
+		if (lineStarted) {
 			stroke(0);
 			strokeWeight(1);
 			line(x, y, mouseX, mouseY);
@@ -19,6 +22,6 @@ function draw() {
 
 		x = mouseX;
 		y = mouseY;
-		first = false;
+		lineStarted = true;
 	}
 }
