@@ -10,6 +10,7 @@ function preload() {
 
 function setup() {
 	createCanvas(displayWidth, displayHeight);
+	background(0);
 	x = random(3);
 	y = random(3);
 	z = random(3);
@@ -37,7 +38,7 @@ function draw() {
 	y += dy * dt;
 	z += dz * dt;
 
-	stroke(0);
+	stroke(0, 255, 0);
 	strokeWeight(2);
 	point(to_x(x), to_z(z));
 }
