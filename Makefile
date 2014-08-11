@@ -12,6 +12,6 @@ serve:
 	python -m http.server
 
 deploy:
-	git push -f origin gh-pages
+	git push -f origin master:gh-pages
 
 .PHONY: help serve
