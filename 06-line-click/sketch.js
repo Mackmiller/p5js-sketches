@@ -6,6 +6,15 @@ function setup() {
   onmouseup = function() {
     lineStarted = false;
   };
+  drawInstructions();
+}
+
+function drawInstructions() {
+  fill(0);
+  textFont('Myriad Pro, Arial, sans-serif');
+  textSize(20);
+  textAlign('center');
+  text('Click and drag to draw line segments', width / 2, height - 50);
 }
 
 function draw() {

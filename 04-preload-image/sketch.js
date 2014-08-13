@@ -6,11 +6,20 @@ function preload() {
 }
 
 function setup() {
-  createCanvas(windowWidth, windowHeight)
+  createCanvas(windowWidth, windowHeight);
+  drawInstructions();
+}
+
+function drawInstructions() {
+  fill(0);
+  textFont('Myriad Pro, Arial, sans-serif');
+  textSize(20);
+  textAlign('center');
+  text('Click to add a kitty', width / 2, height - 50);
 }
 
 function draw() {
   if (mouseIsPressed) {
-    image(cat, mouseX, mouseY)
+    image(cat, mouseX - cat.width / 2, mouseY - cat.height / 2)
   }
 }
